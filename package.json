@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-spin-highlighter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spin language highlighter for GitBook.",
   "main": "index.js",
   "engines": {
