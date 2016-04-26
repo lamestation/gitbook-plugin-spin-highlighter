@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-spin-highlighter",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "Spin language highlighter for GitBook.",
   "main": "index.js",
   "engines": {
@@ -19,7 +19,7 @@
   "maintainers": [
     {
       "name": "Brett Weir",
-      "email": "contact@lamestation.com"
+      "email": "brett@lamestation.com"
     }
   ]
 }
