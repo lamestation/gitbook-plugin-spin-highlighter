@@ -68,17 +68,21 @@ module.exports = {
                         strs[i] = ' ';
                     }
 
+
                     highlighted_block += '<span class="' + block_class_main + ' ' + block_classes[currentblock] + '">';
 
+
+                    // unselectable colors
+                    highlighted_block += '<span unselectable="on" class="' + line_class_main + ' ' + edit_block + ' spin-unselectable-text">' + firstchar + '</span>';
+
+                    // text
                     if (edit_block !== '') {
                         highlighted_block += '<span class="' + line_class_main + ' ' + edit_block + '">';
-                        //highlighted_block += firstchar + strs[i];
                         highlighted_block += strs[i];
                         highlighted_block += "</span>";
                     }
                     else
                     {
-                        //highlighted_block += firstchar + strs[i];
                         highlighted_block += strs[i];
                     }
 
