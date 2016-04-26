@@ -1,25 +1,25 @@
 {
-  "name": "gitbook-plugin-code-highlighter",
+  "name": "gitbook-plugin-spin-highlighter",
   "version": "1.0.6",
-  "description": "Highlight specific lines of code using a special string at the beginning of a line.",
+  "description": "Spin language highlighter for GitBook.",
   "main": "index.js",
   "engines": {
     "gitbook": ">=2.0.0"
   },
-  "homepage": "https://github.com/makaimc/gitbook-plugin-code-highlighter",
+  "homepage": "https://github.com/lamestation/gitbook-plugin-spin-highlighter",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/makaimc/gitbook-plugin-code-highlighter.git"
+    "url": "git+https://github.com/lamestation/gitbook-plugin-spin-highlighter.git"
   },
   "license": "MIT",
   "_npmUser": {
-    "name": "mattmakai",
-    "email": "matthew.makai@gmail.com"
+    "name": "lamestation",
+    "email": "contact@lamestation.com"
   },
   "maintainers": [
     {
-      "name": "Matt Makai",
-      "email": "matthew.makai@gmail.com"
+      "name": "Brett Weir",
+      "email": "contact@lamestation.com"
     }
   ]
 }

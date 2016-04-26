@@ -1,13 +1,14 @@
-# gitbook-plugin-code-highlighter
+# gitbook-plugin-spin-highlighter
+
 [GitBook plugin](https://plugins.gitbook.com/) to highlight specific 
 lines in code blocks.
 
-
 ## Example
+
 Here are a couple of highlighted [Python](https://www.fullstackpython.com/) 
 code lines using a yellow background:
  
-<img src="https://raw.githubusercontent.com/makaimc/gitbook-plugin-code-highlighter/master/docs/img/example-highlight.png">
+<img src="https://raw.githubusercontent.com/makaimc/gitbook-plugin-spin-highlighter/master/docs/img/example-highlight.png">
 
 The above example was generated from these source lines:
 
@@ -28,23 +29,14 @@ from fabric.context_managers import cd
 1. The default **highlight** plugin that is built into GitBook must be 
    disabled, because it prevents other plugins from processing code 
    blocks. Here is an example `book.json` with the highlight plugin 
-   disabled and this code-highlighter plugin enabled.
+   disabled and this spin-highlighter plugin enabled.
 
         {
-            "author": "Matthew Makai",
-            "cover": "cover.jpg",
-            "gitbook": "2.x.x",
-            "plugins": ["-highlight", "code-highlighter"],
-            "title": "The Full Stack Python Guide to Deployments",
-            "pdf": {
-                "pageNumbers": true,
-                "headerTemplate": " ",
-                "footerTemplate": " "
-            }
+            "plugins": ["-highlight", "spin-highlighter"]
         }
 
 1. Run `gitbook install` to pull down 
-   [the latest plugin version from NPM](https://www.npmjs.com/package/gitbook-plugin-code-highlighter).
+   [the latest plugin version from NPM](https://www.npmjs.com/package/gitbook-plugin-spin-highlighter).
 
 
 ## How To Use After Installation
