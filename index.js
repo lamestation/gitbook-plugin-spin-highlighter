@@ -24,6 +24,10 @@ module.exports = {
             var highlighted_block = '';
             var currentblock = "con";
 
+            if (block.kwargs.language) {
+                currentblock = block.kwargs.language.toLowerCase();
+            }
+
 
             try {
 
