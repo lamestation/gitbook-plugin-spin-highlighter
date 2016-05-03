@@ -1,5 +1,6 @@
 var block_class_main = "spin-highlight-block";
 var line_class_main = "spin-highlight-line";
+var line_class_none = "spin-highlight-line-none";
 
 var block_classes = {
     "con" : "spin-highlight-block-con",
@@ -37,8 +38,7 @@ module.exports = {
 
                 for (var i = 0; i < strs.length; i++) {
 
-                    var edit_block = '';
-                    var firstchar = ' ';
+                    var edit_block = line_class_none;
 
                     // check if edit features exist
                     for (var property in line_classes) {
@@ -47,7 +47,6 @@ module.exports = {
 
                         if (strs[i].length >= mark_len && strs[i].substring(0, mark_len) == property) {
                             edit_block = line_classes[property];
-                            firstchar = property[0];
                             strs[i] = strs[i].substring(mark_len);
                             break;
                         }
@@ -68,24 +67,17 @@ module.exports = {
                         strs[i] = ' ';
                     }
 
-
-                    highlighted_block += '<span class="' + block_class_main + ' ' + block_classes[currentblock] + '">';
-
-
-                    // unselectable colors
-                    highlighted_block += '<span unselectable="on" class="' + line_class_main + ' ' + edit_block + ' spin-unselectable-text">' + firstchar + '</span>';
-
-                    // text
-                    if (edit_block !== '') {
-                        highlighted_block += '<span class="' + line_class_main + ' ' + edit_block + '">';
-                        highlighted_block += strs[i];
-                        highlighted_block += "</span>";
-                    }
-                    else
+                    highlighted_block += '<span class="' + block_class_main + ' ' + block_classes[currentblock];
+                    
+                    if (edit_block !== line_class_none)
                     {
-                        highlighted_block += strs[i];
+                        highlighted_block += ' ' + line_class_main;
                     }
 
+                    highlighted_block += ' ' + edit_block;
+                        
+                    highlighted_block += '">';
+                    highlighted_block += strs[i];
                     highlighted_block += "</span>";
 
                     if (i < strs.length-1) {
